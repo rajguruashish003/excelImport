@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-01-15T14:07:34 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cover_letter" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <property name="com.jaspersoft.studio.unit." value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+    <property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+    <parameter name="donor_address" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <detail>
+        <band height="160" splitType="Stretch">
+            <staticText>
+                <reportElement x="54" y="35" width="306" height="60"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Charitable Adult Rides & Services
+4669 Murphy Canyon Road, Suite 200
+San Diego, CA 92123]]></text>
+            </staticText>
+        </band>
+        <band height="301">
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement stretchType="RelativeToBandHeight" x="54" y="72" width="408" height="137"/>
+                <textElement markup="html">
+                    <font size="12" isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{donor_address}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <pageFooter>
+        <band height="231">
+            <staticText>
+                <reportElement x="54" y="210" width="108" height="21"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font size="12" isBold="false"/>
+                </textElement>
+                <text><![CDATA[COVER SHEET]]></text>
+            </staticText>
+        </band>
+    </pageFooter>
+</jasperReport>
